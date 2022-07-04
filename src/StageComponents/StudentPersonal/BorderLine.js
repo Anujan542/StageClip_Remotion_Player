@@ -7,7 +7,7 @@ const Container = styled.div`
   height: ${(props) => props.height}px;
 `;
 
-export const GlowingStroke = ({ width, height, radius, color1, color2 }) => {
+export const BorderLine = ({ width, height, radius, color1, color2 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 

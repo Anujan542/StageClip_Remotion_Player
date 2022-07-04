@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 import { GlowingStroke } from "../StudentImageSlide/GlowingStroke";
 import { StudentGradTitle } from "./StudentGradTitle";
 
-const StudentVideo = ({ speed, volume }) => {
+const StudentVideo = ({ speed, volume, title }) => {
   const frame = useCurrentFrame();
   return (
     <AbsoluteFill
@@ -60,7 +60,7 @@ const StudentVideo = ({ speed, volume }) => {
             color2="black"
           />
 
-          <StudentGradTitle gradTitle="#NPCGrad" />
+          <StudentGradTitle gradTitle={title} />
         </div>
       </div>
     </AbsoluteFill>

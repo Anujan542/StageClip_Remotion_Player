@@ -28,7 +28,7 @@ export const HelloWorld = () => {
 				<ParagraphTitle x={2} y={750} text="This has been a learning journey for me" marginLeft="49rem" />
 				</Sequence>
 				<Sequence from={270} durationInFrames={150} >
-				<ParagraphTitle x={2} y={800} text="being 6 hours away from home. I thank" marginLeft="49.5rem" />
+				<ParagraphTitle x={2} y={800} text="being 6 hours away from home.I thank" marginLeft="49.5rem" />
 				</Sequence>
 				<Sequence from={290} durationInFrames={130} >
 				<ParagraphTitle x={2} y={850} text="everyone who has believed in me and" marginLeft="50rem" />
@@ -44,7 +44,7 @@ export const HelloWorld = () => {
 				</Sequence>
 				<Sequence from={420} durationInFrames={472}>
 					<Fade type="in" duration={50}>
-						<StudentVideo speed={1} volume={1} />
+						<StudentVideo title="#NPCGrad" speed={1} volume={1} />
 					</Fade>
 				</Sequence>
 				<Sequence from={875} durationInFrames={20} >
@@ -52,19 +52,22 @@ export const HelloWorld = () => {
 				</Sequence>
 				<Sequence from={880}  durationInFrames={665} >
 					<Fade type="in" duration={10}>
-						<StudentVideo speed={0.7} volume={0} />
+						<StudentVideo title="#NPCGrad" speed={0.7} volume={0} />
 					</Fade>
 				</Sequence>
 				<Sequence from={1540} durationInFrames={20} >
 					<GradientCircle color="white" />
 				</Sequence>
 				<Sequence from={1560} durationInFrames={230} >
-					<StudentPersonalVideo />
+					<StudentPersonalVideo title="#NPCGrad" />
 				</Sequence>
-				<Sequence from={1780}  durationInFrames={100} >
-					<Fade type="in" duration={50}>
+				<Sequence from={1770} durationInFrames={20} >
+					<GradientCircle color="#00bfff" />
+				</Sequence>
+				<Sequence from={1773}  durationInFrames={100} >
+					{/* <Fade type="out" duration={50}> */}
 						<FinalOuttro />
-					</Fade>
+					{/* </Fade> */}
 				</Sequence>
 			</div>
 		</>

@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import logo from "../assets/logo.png";
 import studentVideo from "../assets/studentLive.mp4";
-import { Title } from "./Title";
 
 import "./test.css";
+import { StudentTitle } from "./StudentTitle";
 
 const Container = styled(AbsoluteFill)`
   background-color: #00bfff;
@@ -32,7 +32,7 @@ const Row = styled.div`
   display: flex;
 `;
 
-const StudentPersonalVideo = () => {
+const StudentPersonalVideo = ({ title }) => {
   return (
     <Container>
       <Row>
@@ -50,12 +50,11 @@ const StudentPersonalVideo = () => {
               height={130}
               src={logo}
             />
-            <Title
-              title1="#NPCGrad"
+            <StudentTitle
+              title1={title}
               titleColor="black"
               top={150}
-              size="70px"
-              fontWeight={800}
+              size="50px"
             />
           </div>
         </Left>

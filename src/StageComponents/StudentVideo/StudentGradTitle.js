@@ -27,11 +27,13 @@ export const StudentGradTitle = ({ gradTitle }) => {
           alignItems: "center",
         }}
       >
-        <h3
+        <div
           style={{
+            fontFamily: "sans-serif",
             textAlign: "center",
             fontSize: "50px",
-            marginTop: "3rem",
+            marginTop: "0rem",
+            fontWeight: "bold",
           }}
         >
           {words.map((t) => {
@@ -56,7 +58,7 @@ export const StudentGradTitle = ({ gradTitle }) => {
               </span>
             );
           })}
-        </h3>
+        </div>
       </AbsoluteFill>
     </AbsoluteFill>
   );
