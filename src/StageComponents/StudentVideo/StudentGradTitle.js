@@ -33,7 +33,7 @@ export const StudentGradTitle = ({ gradTitle }) => {
             textAlign: "center",
             fontSize: "50px",
             marginTop: "0rem",
-            fontWeight: "bold",
+            fontWeight: "800",
           }}
         >
           {words.map((t) => {

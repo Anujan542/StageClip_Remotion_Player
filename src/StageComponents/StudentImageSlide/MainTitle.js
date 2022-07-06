@@ -6,6 +6,8 @@ import {
   useVideoConfig,
 } from "remotion";
 
+import "./test.css";
+
 export const MainTitle = ({
   title1,
   title2,
@@ -14,7 +16,6 @@ export const MainTitle = ({
   size,
   marginLeft,
   fontWeight,
-  fontStyle,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -37,11 +38,11 @@ export const MainTitle = ({
     >
       <div
         style={{
-          fontFamily: "sans-serif",
+          fontFamily: "Noto Sans KR",
+          letterSpacing: "10px",
           fontSize: size,
           titleColor,
-          fontWeight: "bold",
-          fontStyle,
+          fontWeight: "900",
           top,
           textAlign: "center",
           position: "absolute",
@@ -50,7 +51,24 @@ export const MainTitle = ({
           transform: `translateY(${interpolate(up(10), [0, 1], [100, 0])}px)`,
         }}
       >
-        {title1} <br /> {title2}
+        {title1}
+      </div>
+      <div
+        style={{
+          fontFamily: "Noto Sans KR",
+          letterSpacing: "10px",
+          fontSize: size,
+          titleColor,
+          fontWeight: "900",
+          marginBottom: "21rem",
+          textAlign: "center",
+          position: "absolute",
+          color: titleColor,
+          display: "inline-block",
+          transform: `translateY(${interpolate(up(10), [0, 1], [100, 0])}px)`,
+        }}
+      >
+        {title2}
       </div>
     </AbsoluteFill>
   );

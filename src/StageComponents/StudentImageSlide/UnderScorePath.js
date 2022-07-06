@@ -42,14 +42,13 @@ const UnderScorePath = ({ color }) => {
           viewBox={`0 0 ${config.width} ${config.height}`}
           width="100%"
           height="450px"
-          //	Transform="translate(0, 0)"
         >
           <g id="g10">
             <path
               transform="scale(0.1)"
               style={{
                 fill: `${color}`,
-                //		FillOpacity: 0.5,
+
                 fillRule: "nonzero",
                 stroke: "none",
               }}
@@ -70,14 +69,13 @@ const UnderScorePath = ({ color }) => {
           viewBox={`0 0 ${config.width} ${config.height}`}
           width="100%"
           height="450px"
-          //		Transform="translate(100, 0)"
         >
           <g id="g10">
             <path
               transform="scale(0.1)"
               style={{
                 fill: `${color}`,
-                //	FillOpacity: 0.5,
+
                 fillRule: "revert",
                 stroke: "none",
               }}

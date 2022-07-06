@@ -1,4 +1,12 @@
-import { AbsoluteFill, Img, OffthreadVideo } from "remotion";
+import {
+  AbsoluteFill,
+  Img,
+  OffthreadVideo,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+  Video,
+} from "remotion";
 import styled from "styled-components";
 
 import logo from "../assets/logo.png";
@@ -6,12 +14,14 @@ import studentVideo from "../assets/studentLive.mp4";
 
 import "./test.css";
 import { StudentTitle } from "./StudentTitle";
+import { BorderLine } from "./BorderLine";
+import { BorderLine2 } from "./BorderLine2";
 
 const Container = styled(AbsoluteFill)`
   background-color: #00bfff;
   flex-direction: row;
-  /* justify-content: end;
-	align-items: end; */
+  /* justify-content: start;
+  align-items: start; */
 `;
 
 const Left = styled.div`
@@ -24,7 +34,7 @@ const Right = styled.div`
 `;
 
 const Spacer = styled.div`
-  width: 120px;
+  width: 100px;
 `;
 
 const Row = styled.div`
@@ -33,6 +43,18 @@ const Row = styled.div`
 `;
 
 const StudentPersonalVideo = ({ title }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const config = useVideoConfig();
+
+  const underscoreWidthRight = spring({
+    from: 0,
+    to: 3000,
+    frame,
+    fps,
+    config: { mass: 10, damping: 500, stiffness: 40 },
+  });
   return (
     <Container>
       <Row>
@@ -41,36 +63,52 @@ const StudentPersonalVideo = ({ title }) => {
             style={{
               position: "relative",
               marginTop: "13rem",
-              marginLeft: "10rem",
+              marginLeft: "20rem",
             }}
           >
             <Img
               className="scale-in-hor-right"
-              width={400}
-              height={130}
+              style={{
+                maxWidth: "300px",
+                maxHeight: "90px",
+                transform: `${underscoreWidthRight}`,
+              }}
               src={logo}
             />
             <StudentTitle
               title1={title}
               titleColor="black"
-              top={150}
-              size="50px"
+              top={100}
+              size="45px"
             />
           </div>
         </Left>
         <Spacer />
         <Right>
-          <OffthreadVideo
-            className="scale-in-hor-right"
-            src={studentVideo}
-            style={{
-              marginTop: "2rem",
-              maxHeight: "70%",
-              maxWidth: "90%",
-              outline: "8px double white",
-              outlineOffset: "-30px",
-            }}
-          />
+          <>
+            <BorderLine
+              width={410}
+              height={700}
+              color1="white"
+              color2="white"
+              radius={5}
+            />
+            <BorderLine2
+              width={400}
+              height={670}
+              color1="white"
+              color2="white"
+              radius={5}
+            />
+            <OffthreadVideo
+              src={studentVideo}
+              style={{
+                marginTop: "2rem",
+                maxHeight: "60%",
+                maxWidth: "100%",
+              }}
+            />
+          </>
         </Right>
       </Row>
     </Container>

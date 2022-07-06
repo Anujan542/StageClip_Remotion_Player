@@ -25,16 +25,16 @@ export const HelloWorld = () => {
 				  </Fade>
 				</Sequence>
 				<Sequence from={250} durationInFrames={170} >
-				<ParagraphTitle x={2} y={750} text="This has been a learning journey for me" marginLeft="49rem" />
+				<ParagraphTitle x={2} y={800} text="This has been a learning journey for me" marginLeft="49rem" />
 				</Sequence>
 				<Sequence from={270} durationInFrames={150} >
-				<ParagraphTitle x={2} y={800} text="being 6 hours away from home.I thank" marginLeft="49.5rem" />
+				<ParagraphTitle x={2} y={850} text="being 6 hours away from home.I thank" marginLeft="49.5rem" />
 				</Sequence>
 				<Sequence from={290} durationInFrames={130} >
-				<ParagraphTitle x={2} y={850} text="everyone who has believed in me and" marginLeft="50rem" />
+				<ParagraphTitle x={2} y={900} text="everyone who has believed in me and" marginLeft="49.5rem" />
 				</Sequence>
 				<Sequence from={310} durationInFrames={110} >
-				<ParagraphTitle x={2} y={900} text="supported me from day one" marginLeft="53rem" />
+				<ParagraphTitle x={2} y={950} text="supported me from day one" marginLeft="53rem" />
 				</Sequence>
 				<Sequence from={380} durationInFrames={20} >
 					<UnderlineEffect color="white" />
@@ -64,10 +64,10 @@ export const HelloWorld = () => {
 				<Sequence from={1770} durationInFrames={20} >
 					<GradientCircle color="#00bfff" />
 				</Sequence>
-				<Sequence from={1773}  durationInFrames={100} >
-					{/* <Fade type="out" duration={50}> */}
+				<Sequence from={1790}  durationInFrames={200} >
+					<Fade type="out" duration={50}>
 						<FinalOuttro />
-					{/* </Fade> */}
+					</Fade>
 				</Sequence>
 			</div>
 		</>

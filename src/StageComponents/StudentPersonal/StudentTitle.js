@@ -31,7 +31,7 @@ export const StudentTitle = ({ title1, titleColor, top, size, marginLeft }) => {
           fontFamily: "sans-serif",
           fontSize: size,
           titleColor,
-          fontWeight: "bold",
+          fontWeight: "800",
           top,
           textAlign: "center",
           position: "absolute",

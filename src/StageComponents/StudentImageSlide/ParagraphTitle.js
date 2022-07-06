@@ -28,13 +28,15 @@ export const ParagraphTitle = ({ text, marginLeft, x, y }) => {
         marginLeft,
       }}
     >
-      <p
+      <div
         style={{
+          fontFamily: "sans-serif",
           transform: `translateY(${translateY}px)`,
+          fontSize: "25px",
         }}
       >
         {text}
-      </p>
+      </div>
     </Container>
   );
 };

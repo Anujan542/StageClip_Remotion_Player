@@ -6,6 +6,7 @@ import UnderScorePath from "./UnderScorePath";
 
 import logo from "../assets/logo.png";
 import { GlowingStroke } from "./GlowingStroke";
+import { BorderLineImage } from "./BoderLineImage";
 
 const Container = styled(AbsoluteFill)`
   background-color: #00bfff;
@@ -35,13 +36,13 @@ const StudentImage = () => {
       <Row>
         <Left>
           <div style={{ position: "relative" }}>
-            {/* <GlowingStroke
+            <BorderLineImage
               width={600}
               height={600}
               radius={3}
               color1="white"
               color2="white"
-            /> */}
+            />
             <Img
               width={600}
               height={600}
@@ -68,18 +69,18 @@ const StudentImage = () => {
         <Spacer />
         <Right>
           <MainTitle
-            title1="MICHEAL"
-            title2="JORDAN"
+            title1="ESSIEANA"
+            title2="BENNETT"
             titleColor="black"
-            top={80}
-            size="70px"
-            fontWeight={800}
+            top={85}
+            size="60px"
+            fontWeight={100}
             marginLeft={350}
           />
           <Title
             titleColor="black"
             titleText="TC in Pre-Nursing"
-            top={300}
+            top={280}
             size="45px"
             fontWeight={500}
             marginLeft={350}

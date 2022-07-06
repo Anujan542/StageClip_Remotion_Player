@@ -26,14 +26,14 @@ const StudentVideo = ({ speed, volume, title }) => {
         <Img
           src={logo}
           style={{
-            marginTop: "10rem",
+            marginTop: "8rem",
             maxWidth: "20%",
             maxHeight: "20%",
             position: "absolute",
-            marginRight: "2rem",
+            marginRight: "1rem",
+            boxShadow: "inherit",
           }}
         />
-        <></>
       </div>
       <Video volume={volume} playbackRate={speed} src={video} />
       <div
@@ -46,7 +46,7 @@ const StudentVideo = ({ speed, volume, title }) => {
         <div
           style={{
             position: "absolute",
-            marginBottom: "10rem",
+            marginBottom: "8rem",
             background: "#00bfff",
             width: "900px",
             height: "100px",

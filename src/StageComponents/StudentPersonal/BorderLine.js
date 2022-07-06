@@ -16,7 +16,7 @@ export const BorderLine = ({ width, height, radius, color1, color2 }) => {
     fps,
     config: {
       //		Damping: 5,
-      stiffness: 1,
+      stiffness: 5,
       //	Mass: 6,
     },
   });
@@ -33,10 +33,10 @@ export const BorderLine = ({ width, height, radius, color1, color2 }) => {
           </linearGradient>
         </defs>
         <rect
-          width={width - 6}
-          height={height - 6}
-          x={3}
-          y={3}
+          width={width - 75}
+          height={height - 75}
+          x={20}
+          y={60}
           rx={radius}
           ry={radius}
           stroke={`url(#${gId})`}
@@ -44,7 +44,7 @@ export const BorderLine = ({ width, height, radius, color1, color2 }) => {
           strokeDasharray={`3500 ${circumference}`}
           strokeDashoffset={strokeDashoffset}
           strokeLinecap="round"
-          strokeWidth={9}
+          strokeWidth={3}
         />
       </svg>
     </Container>

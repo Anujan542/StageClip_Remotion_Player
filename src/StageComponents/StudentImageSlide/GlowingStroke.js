@@ -16,7 +16,7 @@ export const GlowingStroke = ({ width, height, radius, color1, color2 }) => {
     fps,
     config: {
       //		Damping: 5,
-      stiffness: 1,
+      stiffness: 5,
       //	Mass: 6,
     },
   });
@@ -33,10 +33,10 @@ export const GlowingStroke = ({ width, height, radius, color1, color2 }) => {
           </linearGradient>
         </defs>
         <rect
-          width={width - 6}
-          height={height - 6}
-          x={3}
-          y={3}
+          width={width - 18}
+          height={height - 18}
+          x={8}
+          y={8}
           rx={radius}
           ry={radius}
           stroke={`url(#${gId})`}
@@ -44,7 +44,7 @@ export const GlowingStroke = ({ width, height, radius, color1, color2 }) => {
           strokeDasharray={`3500 ${circumference}`}
           strokeDashoffset={strokeDashoffset}
           strokeLinecap="round"
-          strokeWidth={9}
+          strokeWidth={4}
         />
       </svg>
     </Container>
